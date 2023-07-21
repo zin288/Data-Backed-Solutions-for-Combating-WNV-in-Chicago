@@ -21,7 +21,8 @@ st.markdown("***Keep yourself safe by predicting the presence of West Nile Virus
 st.markdown("***Note: your address must exist within our database for the prediction to work!***")
 @st.cache_data
 def get_data(filename):
-    df = pd.read_csv(filename)
+    file_path_concat = os.path.join('/app/data-backed-solutions-for-combating-wnv-in-chicago/streamlit/', filename)
+    df = pd.read_csv(file_path_concat)
 
     # Data needed for model 1
     df_filtered = df[[  # Categorical data:

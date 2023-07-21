@@ -3,15 +3,15 @@ from PIL import Image
 import os
 
 def load_file(filename):
-    current_directory = os.getcwd()
-    st.write("Current directory:", current_directory)
+
+    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/app/data-backed-solutions-for-combating-wnv-in-chicago/streamlit/image')
     
-    file_path_concat = os.path.join(current_directory, '/streamlit/images/')
-    file_path_concat = os.path.join(file_path_concat, filename)
+    # file_path_concat = os.path.join(current_directory, filepath)
+
+    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), filename)
     image = Image.open(file_path_concat)
-    
-    # pd.read_csv(filepath)
-    return pd.read_csv(image)
+    return image
+
 
 ## Set Page configuration ------------------------------------------------------------------------------------------------------------------------
 

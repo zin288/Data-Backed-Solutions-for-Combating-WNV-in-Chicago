@@ -2,14 +2,15 @@ import streamlit as st
 from PIL import Image
 import os
 
-def load_file(filepath):
+def load_file(filename):
     current_directory = os.getcwd()
     
-    file_path_concat = os.path.join(current_directory, filepath)
-    train_df = pd.read_csv(file_path_concat)
+    file_path_concat = os.path.join(current_directory, '/streamlit/images/')
+    file_path_concat = os.path.join(file_path_concat, filename)
+    image = Image.open(file_path_concat)
     
-    pd.read_csv(filepath)
-    return pd.read_csv(filepath)
+    # pd.read_csv(filepath)
+    return pd.read_csv(image)
 
 ## Set Page configuration ------------------------------------------------------------------------------------------------------------------------
 
@@ -25,7 +26,7 @@ col1, col2 = st.columns(2)
 
 
 col1.subheader("WNV Density Heatmap for 2007")
-image2007 = Image.open('images/2007_density_map.png')
+image2007 = load_file('2007_density_map.png')
 col1.image(image2007)
          
 col1.markdown("""___""")

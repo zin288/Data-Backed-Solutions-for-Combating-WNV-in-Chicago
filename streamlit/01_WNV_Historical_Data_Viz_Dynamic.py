@@ -21,11 +21,11 @@ def load_file(filepath):
     pd.read_csv(filepath)
     return pd.read_csv(filepath)
 
-df = load_file("../assets/train.csv")
+df = load_file("./data/train.csv")
 
 # Load the spray dataset
 
-spray_df = load_file("../assets/spray.csv")
+spray_df = load_file("./data/spray.csv")
 
 # Convert date columns to datetime
 df['Date'] = pd.to_datetime(df['Date'])

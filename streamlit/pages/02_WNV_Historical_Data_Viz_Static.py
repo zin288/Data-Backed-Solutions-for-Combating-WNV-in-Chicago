@@ -4,7 +4,7 @@ import os
 
 def load_file(filename):
 
-    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/app/data-backed-solutions-for-combating-wnv-in-chicago/streamlit/image')
+    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/app/data-backed-solutions-for-combating-wnv-in-chicago/streamlit/images')
     st.write('file_path_concat:', file_path_concat)
     
     # file_path_concat = os.path.join(current_directory, filepath)

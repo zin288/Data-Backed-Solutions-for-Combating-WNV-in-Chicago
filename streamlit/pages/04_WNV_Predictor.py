@@ -5,6 +5,7 @@ import numpy as np
 import pickle
 import datetime
 import imblearn
+import os
 
 #from wnv_historical_data_viz import df (NOT NEEDED)
 
@@ -128,6 +129,11 @@ predictors_df = get_predictors()
 def wnv_predictor(predictors_df):
 
     #st.write(predictors_df)
+
+    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/app/data-backed-solutions-for-combating-wnv-in-chicago')
+    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), filepath)
+    return pd.read_csv(file_path_concat)
+
     filename = 'models/ada_model.pkl'
     model1 = pickle.load(open(filename, 'rb'))
 

@@ -135,7 +135,7 @@ def wnv_predictor(predictors_df):
     #st.write(predictors_df)
 
     file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/app/data-backed-solutions-for-combating-wnv-in-chicago/streamlit/')
-    file_path_concat = os.path.join(file_path_concat, models/ada_model.pkl)
+    file_path_concat = os.path.join(file_path_concat, 'models/ada_model.pkl')
 
     # filename = '/app/data-backed-solutions-for-combating-wnv-in-chicago/models/ada_model.pkl'
     model1 = pickle.load(open(file_path_concat, 'rb'))

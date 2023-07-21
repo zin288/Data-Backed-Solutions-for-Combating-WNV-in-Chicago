@@ -134,8 +134,11 @@ def wnv_predictor(predictors_df):
 
     #st.write(predictors_df)
 
-    filename = '/app/data-backed-solutions-for-combating-wnv-in-chicago/models/ada_model.pkl'
-    model1 = pickle.load(open(filename, 'rb'))
+    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/app/data-backed-solutions-for-combating-wnv-in-chicago/streamlit/')
+    file_path_concat = os.path.join(file_path_concat, models/ada_model.pkl)
+
+    # filename = '/app/data-backed-solutions-for-combating-wnv-in-chicago/models/ada_model.pkl'
+    model1 = pickle.load(open(file_path_concat, 'rb'))
 
     # Generate prediction based on user selected attributes
     y_pred = model1.predict(predictors_df)

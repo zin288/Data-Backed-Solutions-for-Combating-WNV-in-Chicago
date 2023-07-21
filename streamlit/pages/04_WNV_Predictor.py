@@ -131,7 +131,7 @@ def wnv_predictor(predictors_df):
     #st.write(predictors_df)
 
     file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/app/data-backed-solutions-for-combating-wnv-in-chicago')
-    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), filepath)
+    file_path_concat = os.path.join(file_path_concat, filepath)
     return pd.read_csv(file_path_concat)
 
     filename = 'models/ada_model.pkl'

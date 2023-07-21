@@ -10,7 +10,7 @@ st.set_page_config(page_title="West Nile Virus Dashboard", page_icon='🦟', lay
 # Load the train dataset
 @st.cache_data
 def load_file(filepath):
-    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/app/data-backed-solutions-for-combating-wnv-in-chicago/streamlit')
+    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), '/app/data-backed-solutions-for-combating-wnv-in-chicago/streamlit/')
     file_path_concat = os.path.join(file_path_concat, filepath)
     return pd.read_csv(file_path_concat)
 

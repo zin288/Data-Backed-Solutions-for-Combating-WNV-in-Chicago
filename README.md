@@ -73,7 +73,9 @@ Public health workers in Chicago setup mosquito traps scattered across the city.
 <br>
 
 ## Data Dictionary
+<details>
 <summary>Click to expand and see the Data Dictionary table</summary>
+
 | Feature                   | Type    | Dataset                       | Description                                 |   
 |---------------------------|---------|-------------------------------|---------------------------------------------|
 | year                      | integer | train_merge_df, test_merge_df | Year that the WNV test is performed         |   
@@ -134,7 +136,7 @@ Public health workers in Chicago setup mosquito traps scattered across the city.
 | Latitude|float|spray_df| Latitude of the spray|
 | Longitude|float|spray_df| Longitude of the spray|
 
-
+</details>
 
 ---
 

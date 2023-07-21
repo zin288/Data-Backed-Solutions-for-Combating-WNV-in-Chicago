@@ -12,10 +12,10 @@ st.markdown("***Map showing weather stations locations, trap locations, number o
 # Load the train dataset
 @st.cache_data    
 def load_file(filepath):
-    # current_directory = os.getcwd()
-    # st.write("Current directory:", current_directory)
-    file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), filepath)
-    # file_path_concat = os.path.join(current_directory, filepath)
+    current_directory = os.getcwd()
+    st.write("Current directory:", current_directory)
+    # file_path_concat = os.path.join(os.path.dirname(os.path.abspath(__file__)), filepath)
+    file_path_concat = os.path.join(current_directory, filepath)
     train_df = pd.read_csv(file_path_concat)
     
     pd.read_csv(filepath)

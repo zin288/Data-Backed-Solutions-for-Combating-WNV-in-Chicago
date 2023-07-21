@@ -4,6 +4,7 @@ import os
 
 def load_file(filename):
     current_directory = os.getcwd()
+    st.write("Current directory:", current_directory)
     
     file_path_concat = os.path.join(current_directory, '/streamlit/images/')
     file_path_concat = os.path.join(file_path_concat, filename)
